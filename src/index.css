@@ -10,7 +10,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8fafc;
+  background: linear-gradient(180deg, #f7fafc 0%, #eef2f7 60%);
+  color: #111827;
+}
+
+/* subtle radial texture to add depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
 }
 
 code {
@@ -20,4 +33,11 @@ code {
 
 .container {
   @apply mx-auto px-4;
+  position: relative;
+  z-index: 10;
+}
+
+/* ensure cards stand out on the background */
+.bg-white {
+  background-color: white;
 }
