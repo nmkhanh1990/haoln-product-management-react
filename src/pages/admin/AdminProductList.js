@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
+import productService from '../../services/productService';
+import { formatErrorMessage } from '../../utils/apiErrorHandler';
 
 const PRODUCT_FIELDS = [
   { name: 'name', label: 'Name', type: 'text', required: true },
@@ -21,17 +23,17 @@ export default function AdminProductList() {
   const [loading, setLoading] = useState(true);
   const [showSidebar, setShowSidebar] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = () => {
-    fetch('/products')
-      .then((r) => r.json())
-      .then((data) => setProducts(data))
-      .catch(() => setProducts([]))
-      .finally(() => setLoading(false));
+  const fetchProducts = async () => {
+    const data = await productService.syncProducts();
+    setProducts(data);
+    setLoading(false);
   };
 
   const handleOpenAddSidebar = () => {
@@ -44,36 +46,83 @@ export default function AdminProductList() {
     setShowSidebar(true);
   };
 
-  const handleSaveProduct = (formData) => {
-    if (editingProduct) {
-      // Update existing product
-      const updated = products.map((p) =>
-        p.id === editingProduct.id ? { ...formData, id: p.id } : p
-      );
+  const handleSaveProduct = async (formData) => {
+    setError(null);
+    setSuccess(null);
+    try {
+      if (editingProduct) {
+        // Update existing product
+        await productService.updateProduct(editingProduct.id, formData);
+        setSuccess('Product updated successfully!');
+      } else {
+        // Create new product
+        await productService.createProduct(formData);
+        setSuccess('Product created successfully!');
+      }
+      
+      // Refresh products list
+      const updated = await productService.syncProducts();
       setProducts(updated);
-      localStorage.setItem('products', JSON.stringify(updated));
-    } else {
-      // Create new product
-      const maxId = products.length ? Math.max(...products.map(p => p.id)) : 0;
-      formData.id = maxId + 1;
-      const updated = [...products, formData];
-      setProducts(updated);
-      localStorage.setItem('products', JSON.stringify(updated));
+      setShowSidebar(false);
+      setEditingProduct(null);
+    } catch (err) {
+      const errorMessage = formatErrorMessage(err);
+      setError(errorMessage);
+      console.error('Error saving product:', err);
     }
-    setShowSidebar(false);
-    setEditingProduct(null);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
-      const updated = products.filter((p) => p.id !== id);
-      setProducts(updated);
-      localStorage.setItem('products', JSON.stringify(updated));
+      setError(null);
+      setSuccess(null);
+      try {
+        await productService.deleteProduct(id);
+        const updated = await productService.syncProducts();
+        setProducts(updated);
+        setSuccess('Product deleted successfully!');
+      } catch (err) {
+        const errorMessage = formatErrorMessage(err);
+        setError(errorMessage);
+        console.error('Error deleting product:', err);
+      }
     }
   };
 
   return (
     <div className="bg-white rounded-lg shadow p-6 relative">
+      {/* Error Alert */}
+      {error && (
+        <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start justify-between">
+          <div>
+            <p className="text-red-800 font-medium">Error</p>
+            <p className="text-red-700 text-sm mt-1">{error}</p>
+          </div>
+          <button
+            onClick={() => setError(null)}
+            className="text-red-500 hover:text-red-700"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
+      {/* Success Alert */}
+      {success && (
+        <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start justify-between">
+          <div>
+            <p className="text-green-800 font-medium">Success</p>
+            <p className="text-green-700 text-sm mt-1">{success}</p>
+          </div>
+          <button
+            onClick={() => setSuccess(null)}
+            className="text-green-500 hover:text-green-700"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-semibold">Product Management</h2>
         <button

@@ -1,86 +1,257 @@
-[
-  {
-    "id": 1,
-    "name": "Classic White T-Shirt",
-    "description": "A comfortable classic white tee made from 100% cotton.",
-    "sku": "TSHIRT-WHT-001",
-    "price": 19.99,
-    "stockQuantity": 120,
-    "brand": "Everyday Co",
-    "color": "White",
-    "size": "M",
-    "material": "Cotton",
-    "gender": "Unisex",
-    "category": "Apparel",
-    "images": [
-      {
-        "productId": 1,
-        "imageUrl": "https://bizweb.dktcdn.net/100/502/737/products/o1cn01whjw6c1gbknfcubon2967904.jpg?v=1723278617470",
-        "isPrimary": true,
-        "displayOrder": 0
-      },
-      {
-        "productId": 1,
-        "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2025/09/BEST-WOMENS-WHITE-T-SHIRTS-SUB-2048px-5858.jpg?auto=webp&quality=75&width=1024",
-        "isPrimary": false,
-        "displayOrder": 1
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Noise-Cancelling Headphones",
-    "description": "Over-ear headphones with active noise cancellation and long battery life.",
-    "sku": "HEAD-NC-200",
-    "price": 129.99,
-    "stockQuantity": 45,
-    "brand": "SoundWave",
-    "color": "Black",
-    "size": "One Size",
-    "material": "Plastic/Metal",
-    "gender": "Unisex",
-    "category": "Electronics",
-    "images": [
-      {
-        "productId": 2,
-        "imageUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw7526678c/images/hi-res/4/4eec3a1b6410386a_AUD008fqSA-soundform-isolate-overear-anc-headphones-web-1-fq.jpg?sfrm=png",
-        "isPrimary": true,
-        "displayOrder": 0
-      },
-      {
-        "productId": 2,
-        "imageUrl": "https://i.ebayimg.com/images/g/7OEAAOSwUmFmbcoC/s-l1200.jpg",
-        "isPrimary": false,
-        "displayOrder": 1
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Stainless Steel Water Bottle",
-    "description": "Keeps drinks cold for 24 hours and hot for 12 hours.",
-    "sku": "BOTTLE-SS-750",
-    "price": 24.5,
-    "stockQuantity": 200,
-    "brand": "HydraPure",
-    "color": "Silver",
-    "size": "750ml",
-    "material": "Stainless Steel",
-    "gender": "Unisex",
-    "category": "Accessories",
-    "images": [
-      {
-        "productId": 3,
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61sS-XIvEXL.jpg",
-        "isPrimary": true,
-        "displayOrder": 0
-      },
-      {
-        "productId": 3,
-        "imageUrl": "hhttps://images-na.ssl-images-amazon.com/images/I/71nq2vYscxL.jpg",
-        "isPrimary": false,
-        "displayOrder": 1
-      }
-    ]
-  }
-]
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "description": "A comfortable classic white tee made from 100% cotton.",
+      "sku": "TSHIRT-WHT-001",
+      "price": 19.99,
+      "stockQuantity": 120,
+      "brand": "Everyday Co",
+      "color": "White",
+      "size": "M",
+      "material": "Cotton",
+      "gender": "Unisex",
+      "category": "Apparel",
+      "images": [
+        {
+          "productId": 1,
+          "imageUrl": "https://bizweb.dktcdn.net/100/502/737/products/o1cn01whjw6c1gbknfcubon2967904.jpg?v=1723278617470",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 1,
+          "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2025/09/BEST-WOMENS-WHITE-T-SHIRTS-SUB-2048px-5858.jpg?auto=webp&quality=75&width=1024",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Noise-Cancelling Headphones",
+      "description": "Over-ear headphones with active noise cancellation and long battery life.",
+      "sku": "HEAD-NC-200",
+      "price": 129.99,
+      "stockQuantity": 45,
+      "brand": "SoundWave",
+      "color": "Black",
+      "size": "One Size",
+      "material": "Plastic/Metal",
+      "gender": "Unisex",
+      "category": "Electronics",
+      "images": [
+        {
+          "productId": 2,
+          "imageUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw7526678c/images/hi-res/4/4eec3a1b6410386a_AUD008fqSA-soundform-isolate-overear-anc-headphones-web-1-fq.jpg?sfrm=png",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 2,
+          "imageUrl": "https://i.ebayimg.com/images/g/7OEAAOSwUmFmbcoC/s-l1200.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Keeps drinks cold for 24 hours and hot for 12 hours.",
+      "sku": "BOTTLE-SS-750",
+      "price": 24.5,
+      "stockQuantity": 200,
+      "brand": "HydraPure",
+      "color": "Silver",
+      "size": "750ml",
+      "material": "Stainless Steel",
+      "gender": "Unisex",
+      "category": "Accessories",
+      "images": [
+        {
+          "productId": 3,
+          "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61sS-XIvEXL.jpg",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 3,
+          "imageUrl": "hhttps://images-na.ssl-images-amazon.com/images/I/71nq2vYscxL.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "description": "A comfortable classic white tee made from 100% cotton.",
+      "sku": "TSHIRT-WHT-001",
+      "price": 19.99,
+      "stockQuantity": 120,
+      "brand": "Everyday Co",
+      "color": "White",
+      "size": "M",
+      "material": "Cotton",
+      "gender": "Unisex",
+      "category": "Apparel",
+      "images": [
+        {
+          "productId": 1,
+          "imageUrl": "https://bizweb.dktcdn.net/100/502/737/products/o1cn01whjw6c1gbknfcubon2967904.jpg?v=1723278617470",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 1,
+          "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2025/09/BEST-WOMENS-WHITE-T-SHIRTS-SUB-2048px-5858.jpg?auto=webp&quality=75&width=1024",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Noise-Cancelling Headphones",
+      "description": "Over-ear headphones with active noise cancellation and long battery life.",
+      "sku": "HEAD-NC-200",
+      "price": 129.99,
+      "stockQuantity": 45,
+      "brand": "SoundWave",
+      "color": "Black",
+      "size": "One Size",
+      "material": "Plastic/Metal",
+      "gender": "Unisex",
+      "category": "Electronics",
+      "images": [
+        {
+          "productId": 2,
+          "imageUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw7526678c/images/hi-res/4/4eec3a1b6410386a_AUD008fqSA-soundform-isolate-overear-anc-headphones-web-1-fq.jpg?sfrm=png",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 2,
+          "imageUrl": "https://i.ebayimg.com/images/g/7OEAAOSwUmFmbcoC/s-l1200.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Keeps drinks cold for 24 hours and hot for 12 hours.",
+      "sku": "BOTTLE-SS-750",
+      "price": 24.5,
+      "stockQuantity": 200,
+      "brand": "HydraPure",
+      "color": "Silver",
+      "size": "750ml",
+      "material": "Stainless Steel",
+      "gender": "Unisex",
+      "category": "Accessories",
+      "images": [
+        {
+          "productId": 3,
+          "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61sS-XIvEXL.jpg",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 3,
+          "imageUrl": "hhttps://images-na.ssl-images-amazon.com/images/I/71nq2vYscxL.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "description": "A comfortable classic white tee made from 100% cotton.",
+      "sku": "TSHIRT-WHT-001",
+      "price": 19.99,
+      "stockQuantity": 120,
+      "brand": "Everyday Co",
+      "color": "White",
+      "size": "M",
+      "material": "Cotton",
+      "gender": "Unisex",
+      "category": "Apparel",
+      "images": [
+        {
+          "productId": 1,
+          "imageUrl": "https://bizweb.dktcdn.net/100/502/737/products/o1cn01whjw6c1gbknfcubon2967904.jpg?v=1723278617470",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 1,
+          "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2025/09/BEST-WOMENS-WHITE-T-SHIRTS-SUB-2048px-5858.jpg?auto=webp&quality=75&width=1024",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Noise-Cancelling Headphones",
+      "description": "Over-ear headphones with active noise cancellation and long battery life.",
+      "sku": "HEAD-NC-200",
+      "price": 129.99,
+      "stockQuantity": 45,
+      "brand": "SoundWave",
+      "color": "Black",
+      "size": "One Size",
+      "material": "Plastic/Metal",
+      "gender": "Unisex",
+      "category": "Electronics",
+      "images": [
+        {
+          "productId": 2,
+          "imageUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw7526678c/images/hi-res/4/4eec3a1b6410386a_AUD008fqSA-soundform-isolate-overear-anc-headphones-web-1-fq.jpg?sfrm=png",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 2,
+          "imageUrl": "https://i.ebayimg.com/images/g/7OEAAOSwUmFmbcoC/s-l1200.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Keeps drinks cold for 24 hours and hot for 12 hours.",
+      "sku": "BOTTLE-SS-750",
+      "price": 24.5,
+      "stockQuantity": 200,
+      "brand": "HydraPure",
+      "color": "Silver",
+      "size": "750ml",
+      "material": "Stainless Steel",
+      "gender": "Unisex",
+      "category": "Accessories",
+      "images": [
+        {
+          "productId": 3,
+          "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61sS-XIvEXL.jpg",
+          "isPrimary": true,
+          "displayOrder": 0
+        },
+        {
+          "productId": 3,
+          "imageUrl": "hhttps://images-na.ssl-images-amazon.com/images/I/71nq2vYscxL.jpg",
+          "isPrimary": false,
+          "displayOrder": 1
+        }
+      ]
+    }
+  ],
+  "error": null
+}
