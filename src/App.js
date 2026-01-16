@@ -2,6 +2,8 @@ import React from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
+import AdminProductList from './pages/admin/AdminProductList';
+import AdminProductForm from './pages/admin/AdminProductForm';
 import './App.css';
 
 function App() {
@@ -11,8 +13,11 @@ function App() {
         <div className="container py-4 flex items-center justify-between">
           <h1 className="text-xl font-semibold">Product Management</h1>
           <nav>
+            <Link to="/admin/products" className="text-blue-600 hover:underline mr-4">
+              Admin
+            </Link>
             <Link to="/products" className="text-blue-600 hover:underline">
-              Products
+              Seller
             </Link>
           </nav>
         </div>
@@ -23,6 +28,8 @@ function App() {
           <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/admin/products" element={<AdminProductList />} />
+          <Route path="/admin/products/:id" element={<AdminProductForm />} />
         </Routes>
       </main>
     </div>
