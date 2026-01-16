@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "category": "Apparel",
+    "price": 19.99,
+    "description": "A comfortable classic white tee made from 100% cotton."
+  },
+  {
+    "id": 2,
+    "name": "Noise-Cancelling Headphones",
+    "category": "Electronics",
+    "price": 129.99,
+    "description": "Over-ear headphones with active noise cancellation and long battery life."
+  },
+  {
+    "id": 3,
+    "name": "Stainless Steel Water Bottle",
+    "category": "Accessories",
+    "price": 24.5,
+    "description": "Keeps drinks cold for 24 hours and hot for 12 hours."
+  }
+]
